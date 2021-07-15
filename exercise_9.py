@@ -8,14 +8,20 @@ def medium_num():
         first = input('Введите первое число ')
         if first.isdigit():
             break
+        else:
+            print('Некорректный ввод')
     while True:
         second = input('Введите второе число ')
         if second.isdigit():
             break
+        else:
+            print('Некорректный ввод')
     while True:
         third = input('Введите третье число ')
         if third.isdigit():
             break
+        else:
+            print('Некорректный ввод')
     first = int(first)
     second = int(second)
     third = int(third)

@@ -8,6 +8,8 @@ def sum_mult():
         my_var = input('Введите трёхзначное число ')
         if len(my_var) == 3 and my_var.isdigit():
             break
+        else:
+            print('Некорректный ввод')
     a, b, c = int(my_var[0]), int(my_var[1]), int(my_var[2])
     my_sum = a + b + c
     my_mult = a * b * c
