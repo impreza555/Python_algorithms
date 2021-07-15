@@ -3,3 +3,39 @@
 составленного из этих отрезков. Если такой треугольник существует, то определить, является ли он разносторонним,
 равнобедренным или равносторонним.
 """
+
+
+def triangle():
+    while True:
+        a = input('Введите введите значение стороны "a" ')
+        if a.isdigit() and a != 0:
+            break
+        else:
+            print('Некорректный ввод')
+    while True:
+        b = input('Введите введите значение стороны "b" ')
+        if b.isdigit() and b != 0:
+            break
+        else:
+            print('Некорректный ввод')
+    while True:
+        c = input('Введите введите значение стороны "c" ')
+        if c.isdigit() and c != 0:
+            break
+        else:
+            print('Некорректный ввод')
+    a = int(a)
+    b = int(b)
+    c = int(c)
+    if a + b <= c or a + c <= b or b + c <= a:
+        print('Треугольник не существует')
+    elif a != b and a != c and b != c:
+        print('Треугольник разносторонний')
+    elif a == b == c:
+        print('Треугольник равносторонний')
+    else:
+        print('Треугольник равнобедренный')
+
+
+if __name__ == "__main__":
+    triangle()
