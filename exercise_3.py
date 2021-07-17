@@ -23,8 +23,10 @@ def equation_straight_line():
     print('Введите координаты точки B(x2;y2):')
     while True:
         x2 = input('\tx2 = ')
-        if (x2[0] == '-' and x2[1:].isdigit()) or x2.isdigit():
+        if ((x2[0] == '-' and x2[1:].isdigit()) or x2.isdigit()) and float(x1) != float(x2):
             break
+        elif float(x1) == float(x2):
+            print('x1 не должен быть равным x2')
         else:
             print('Некорректный ввод')
     while True:
