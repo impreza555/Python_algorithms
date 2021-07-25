@@ -1,32 +1,29 @@
-from random import random
+import random
+
 """
 6. В одномерном массиве найти сумму элементов, находящихся между минимальным и максимальным элементами.
 Сами минимальный и максимальный элементы в сумму не включать.
 """
+# random.seed(12)
 
 
 def amount_between_max_min():
-
-    N = 10
-    a = [0] * N
-    for i in range(N):
-        a[i] = int(random() * 50)
-        print('%3d' % a[i], end='')
-    print()
+    arr = [random.randint(-50, 50) for i in range(20)]
     min_id = 0
     max_id = 0
-    for i in range(1, N):
-        if a[i] < a[min_id]:
+    for i in range(1, len(arr)):
+        if arr[i] < arr[min_id]:
             min_id = i
-        elif a[i] > a[max_id]:
+        elif arr[i] > arr[max_id]:
             max_id = i
-    print(a[min_id], a[max_id])
     if min_id > max_id:
         min_id, max_id = max_id, min_id
-    summa = 0
+    sum = 0
     for i in range(min_id + 1, max_id):
-        summa += a[i]
-    print(summa)
+        sum += arr[i]
+    return f'В массиве {arr}\nМинимальный элемент {arr[min_id]}\nМаксимальный элемент {arr[max_id]}' \
+           f'\nСумма элементов между ними {sum}'
 
 
-amount_between_max_min()
+if __name__ == '__main__':
+    print(amount_between_max_min())
