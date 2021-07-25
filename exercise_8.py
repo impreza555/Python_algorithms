@@ -3,6 +3,8 @@
 Программа должна вычислять сумму введенных элементов каждой строки и записывать ее в последнюю ячейку строки.
 В конце следует вывести полученную матрицу.
 """
+R = 4
+C = 4
 
 
 def row(n):
@@ -18,11 +20,11 @@ def row(n):
     return row
 
 
-def matrix(r, c):
+def matrix(R, C):
     matrix = []
-    for i in range(c):
+    for i in range(C):
         print(f'Введите строку матрицы\n{"-" * 23}')
-        matrix.append(row(r))
+        matrix.append(row(R))
     for m_row in matrix:
         m_row.append(sum(m_row))
     print(f'{"-" * 23}')
@@ -31,4 +33,4 @@ def matrix(r, c):
 
 
 if __name__ == '__main__':
-    matrix(4, 4)
+    matrix(R, C)
