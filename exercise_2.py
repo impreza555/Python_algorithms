@@ -6,3 +6,23 @@
 Результаты анализа сохранить в виде комментариев в файле с кодом.
 """
 
+
+def search_prime(n):
+    count = 1
+    number = 1
+    prime = [2]
+
+    if n == 1:
+        return 2
+
+    while count != n:
+        number += 2
+
+        for num in prime:
+            if number % num == 0:
+                break
+        else:
+            count += 1
+            prime.append(number)
+
+    return number
