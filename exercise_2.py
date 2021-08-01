@@ -6,3 +6,15 @@
 Примечание: для решения задач попробуйте применить какую-нибудь коллекцию из модуля collections
 """
 
+
+def addition_hex_numbers(a, b):
+    pass
+
+
+def multiplication_hex_numbers():
+    pass
+
+
+a = list(input('Введите 1-е шестнадцатиричное число: ').upper())
+b = list(input('Введите 2-е шестнадцатиричное число: ').upper())
+# print(a, b)
