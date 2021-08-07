@@ -10,6 +10,10 @@
 
 
 def calculator():
+    switch = {'+': lambda x, y: x + y,
+              '-': lambda x, y: x - y,
+              '*': lambda x, y: x * y,
+              '/': lambda x, y: x / y}
     while True:
         try:
             first_num = float(input('Введите первое число '))
@@ -29,16 +33,16 @@ def calculator():
         if second_num == 0.0 and operator == "/":
             print('Делить на "0" нельзя... В этом измерении...')
             continue
-        if operator == "+" or operator == "-" or operator == "*" or operator == "/":
+        if operator == '+' or operator == '-' or operator == '*' or operator == '/':
             break
-    if operator == "+":
-        result = first_num + second_num
-    elif operator == "-":
-        result = first_num - second_num
-    elif operator == "*":
-        result = first_num * second_num
-    elif operator == "/":
-        result = first_num / second_num
+    if operator == '+':
+        result = switch['+'](first_num, second_num)
+    elif operator == '-':
+        result = switch['-'](first_num, second_num)
+    elif operator == '*':
+        result = switch['*'](first_num, second_num)
+    elif operator == '/':
+        result = switch['/'](first_num, second_num)
     return f'{first_num} {operator} {second_num} = {result}'
 
 
