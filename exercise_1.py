@@ -11,8 +11,8 @@ import random
 def bubble_sort(arr):
     for j in range(len(arr) - 1):
         for i in range(len(arr) - 1 - j):
-            if arr[len(arr) - 1 - i] > arr[len(arr) - 1 - i - 1]:
-                arr[len(arr) - 1 - i], arr[len(arr) - 1 - i - 1] = arr[len(arr) - 1 - i - 1], arr[len(arr) - 1 - i]
+            if arr[len(arr) - 1 - i] > arr[len(arr) - 2 - i]:
+                arr[len(arr) - 1 - i], arr[len(arr) - 2 - i] = arr[len(arr) - 2 - i], arr[len(arr) - 1 - i]
     return arr
 
 
@@ -20,8 +20,8 @@ def bubble_sort(arr):
 # def bubble_sort(arr):
 #     for j in range(len(arr) - 1):
 #         for i in range(len(arr) - 1 - j):
-#             if arr[len(arr) - 1 - i] < arr[len(arr) - 1 - i - 1]:
-#                 arr[len(arr) - 1 - i], arr[len(arr) - 1 - i - 1] = arr[len(arr) - 1 - i - 1], arr[len(arr) - 1 - i]
+#             if arr[len(arr) - 1 - i] < arr[len(arr) - 2 - i]:
+#                 arr[len(arr) - 1 - i], arr[len(arr) - 2 - i] = arr[len(arr) - 2 - i], arr[len(arr) - 1 - i]
 #     return arr
 
 
