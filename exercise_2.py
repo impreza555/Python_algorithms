@@ -8,10 +8,8 @@ import random
 
 def merge_sort(arr):
     if len(arr) > 1:
-        left = arr[:len(arr) // 2]
-        right = arr[len(arr) // 2:]
-        merge_sort(left)
-        merge_sort(right)
+        left = merge_sort(arr[:len(arr) // 2])
+        right = merge_sort(arr[len(arr) // 2:])
         i = j = k = 0
         while i < len(left) and j < len(right):
             if left[i] < right[j]:
