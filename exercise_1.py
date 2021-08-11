@@ -61,25 +61,26 @@ def calculation_profit(x):
     return average_profit, winners, losers
 
 
-while True:
-    n = input('Введите количество предприятий: ')
-    if n.isdigit():
-        n = int(n)
-        break
-    else:
-        print('Некорректный ввод')
-companies = [Company(*data_input(i + 1)) for i in range(n)]
-print('_' * 60)
-if n == 1:
-    print('Для расчёта представлены данные одного предприятия: {} его годовая прибыль: {}'
-          ' '.format(companies[0].name, companies[0].year))
-else:
-    comp = calculation_profit(n)
-    print('Cредняя прибыль за год для всех предприятий: {0}{1}{2}'.format(comp[0], '\n', '_' * 60))
-    print(f'Предприятия с прибылью больше годовой:\n{"_" * 60}')
-    for _ in comp[1]:
-        print(f'{_.name}, годовая прибыль {_.year}')
+if __name__ == '__main__':
+    while True:
+        n = input('Введите количество предприятий: ')
+        if n.isdigit():
+            n = int(n)
+            break
+        else:
+            print('Некорректный ввод')
+    companies = [Company(*data_input(i + 1)) for i in range(n)]
     print('_' * 60)
-    print(f'Предприятия с прибылью меньше годовой:\n{"_" * 60}')
-    for _ in comp[2]:
-        print(f'{_.name}, годовая прибыль {_.year}')
+    if n == 1:
+        print('Для расчёта представлены данные одного предприятия: {} его годовая прибыль: {}'
+              ' '.format(companies[0].name, companies[0].year))
+    else:
+        comp = calculation_profit(n)
+        print('Cредняя прибыль за год для всех предприятий: {0}{1}{2}'.format(comp[0], '\n', '_' * 60))
+        print(f'Предприятия с прибылью больше годовой:\n{"_" * 60}')
+        for _ in comp[1]:
+            print(f'{_.name}, годовая прибыль {_.year}')
+        print('_' * 60)
+        print(f'Предприятия с прибылью меньше годовой:\n{"_" * 60}')
+        for _ in comp[2]:
+            print(f'{_.name}, годовая прибыль {_.year}')

@@ -69,7 +69,8 @@ def multiplication_hex_numbers(a, b):
     return list(result)
 
 
-A = list(input('Введите 1-е шестнадцатиричное число: ').upper())
-B = list(input('Введите 2-е шестнадцатиричное число: ').upper())
-print(*A, '+', *B, '=', *addition_hex_numbers(A, B))
-print(*A, '+', *B, '=', *multiplication_hex_numbers(A, B))
+if __name__ == '__main__':
+    A = list(input('Введите 1-е шестнадцатиричное число: ').upper())
+    B = list(input('Введите 2-е шестнадцатиричное число: ').upper())
+    print(*A, '+', *B, '=', *addition_hex_numbers(A, B))
+    print(*A, '+', *B, '=', *multiplication_hex_numbers(A, B))
