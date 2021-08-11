@@ -24,8 +24,8 @@ def bubble_sort(arr):
 #                 arr[len(arr) - 1 - i], arr[len(arr) - 2 - i] = arr[len(arr) - 2 - i], arr[len(arr) - 1 - i]
 #     return arr
 
-
-a = [random.randint(-100, 100) for i in range(20)]
-# a = [64, -10, -61, 92, 72, -47, -81, -75, -99, -8]
-print(f'Исходный массив:\n{a}')
-print(f'Отсортированный массив:\n{bubble_sort(a)}')
+if __name__ == '__main__':
+    a = [random.randint(-100, 100) for i in range(20)]
+    # a = [64, -10, -61, 92, 72, -47, -81, -75, -99, -8]
+    print(f'Исходный массив:\n{a}')
+    print(f'Отсортированный массив:\n{bubble_sort(a)}')

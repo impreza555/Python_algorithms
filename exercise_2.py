@@ -30,6 +30,7 @@ def merge_sort(arr):
     return arr
 
 
-a = [round(random.uniform(0, 50), 3) for i in range(20)]
-print(f'Исходный массив:\n{a}')
-print(f'Отсортированный массив:\n{merge_sort(a)}')
+if __name__ == '__main__':
+    a = [round(random.uniform(0, 50), 3) for i in range(20)]
+    print(f'Исходный массив:\n{a}')
+    print(f'Отсортированный массив:\n{merge_sort(a)}')
